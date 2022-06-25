@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;1,400;1,500;1,600;1,700&family=Poppins:wght@300;400;500;600;700&display=swap');
+:root
+{
+    /* COLOR */
+    --primary-color: hsl(229, 92%, 20%);
+    --accent-color: hsl(0, 85%, 46%);
+    --base-color: hsl(0, 0%, 0%);
+    --bright-color: hsl(0, 0%, 93%);
+
+    /* FONT SIZE */
+    --regular-size: 1rem;
+    --subtitle-size: 1.3rem;
+    --small-size: .8rem;
+    --header-size: 2rem;
+    
+    /* SCREEN BIGGER */
+    --header-tb: 4rem;
+    
+    /* FONT FAM */
+    --title-fam: 'Playfair Display', serif;
+    --regular-fam: 'Poppins', sans-serif;
+
+    /* FONT WEIGHT */
+    --regular: 500;
+    --semi-bold:600;
+    --bold: 700;
+}
+
+/* BASE CSS */
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html 
+{
+    scroll-behavior: smooth;
+    font-family: var(--regular-fam);
+    font-size: var(--regular-size);
+    color: var(--bright-color);
+}
+
+body
+{
+    position: relative;
+}
+
+.center 
+{
+    background-color: rgba(0, 0, 0, 0.463);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    display: none;
+    transition: .5s;
+}
+
+.form-container
+{
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    width: 420px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.463);
+    border-radius: 2px;
+}
+
+.text 
+{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 30px;
+    font-family: var(--title-fam);
+}
+
+.data
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.data input
+{
+    height: 40px;
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid lightgrey;
+}
+
+.data label
+{
+    font-size: 18px;
+}
+
+.forgot a
+{
+ color: var(--primary-color);
+ text-decoration: none;
+ font-size: 16px;
+ margin: 10px 0;
+}
+
+.forgot a:hover
+{
+    text-decoration: underline;
+}
+
+.submit-btn
+{
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: linear-gradient(to right, hsl(229, 92%, 20%), hsl(0, 85%, 46%));
+    color: var(--bright-color);
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+    border-radius: 3px;
+}
+
+.register
+{
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.register a
+{
+    color: var(--accent-color);
+}
+
+.register a:hover
+{
+    text-decoration: underline;
+}
+
+
+a
+{
+    text-decoration: none;
+    color: var(--bright-color);
+}
+
+ul
+{
+    list-style: none;
+}
+
+.logo
+{
+    position: absolute;
+    z-index: 99999;
+    color: var(--bright-color);
+    font-size: 1rem;
+    font-family: var(--title-fam);
+    letter-spacing: 2px;
+    font-weight: var(--bold);
+    top: 0px;
+    left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo span
+{
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    font-weight: var(--bold);
+}
+
+.logo .login
+{
+    font-size: 20px;
+    color: var(--bright-color);
+    cursor: pointer;
+}
+
+.show
+{
+    display: block;
+}
+
+section 
+{
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+.fixed
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    padding: 0px 20px;
+    transition: .5s;
+}
+
+
+.darken
+{
+    filter: brightness(70%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.darken2
+{
+    filter: brightness(60%);
+
+}
+
+.blur
+{
+    filter:brightness(70%) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a' x='0' y='0' width='1' height='1' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='3' result='b'/%3E%3CfeMorphology operator='dilate' radius='4'/%3E %3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='b'/%3E%3C/feMerge%3E%3C/filter%3E %3C/svg%3E#a");
+
+}
+
+
+/* LANDING SECTION */
+
+.welcome-section
+{
+    background-size: cover;
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+}
+
+.welcome-title
+{
+    font-size: var(--header-size);
+    font-family: var(--title-fam);
+    letter-spacing: 1px;
+}
+
+.hero-bg
+{
+    background: url("./assets/hero.jpg");
+    background-size: cover;
+}
+
+.explore-btn
+{
+    padding: 20px 40px;
+    border: 1px solid var(--bright-color);
+    transition: .5s;
+}
+
+/* NAV SECTION */
+
+.nav-list
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    width: 100%;
+    height: 70%;
+}
+
+.nav-text
+{
+    background-color: var(--base-color);
+    padding: 40px 40px;
+    text-align: center;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-text h2
+{
+    margin-bottom: 1rem;
+    font-family: var(--title-fam);
+}
+
+.nav-text p
+{
+    max-width: 80%;
+    font-size: var(--small-size);
+}
+
+.explore, .book
+{
+    height: 100%;
+    position: relative;
+    font-family: var(--title-fam);
+    font-size: var(--subtitle-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+
+.exp-bg
+{
+    background: url("./assets/culture\ 1.jpg");
+    background-size: cover;
+
+}
+
+.book-bg
+{
+    background: url("./assets/beach/senggigi\ beach\ 1.jpg");
+    background-size: cover;
+}
+
+.explore:hover,
+.book:hover
+{
+    font-size: 1.5rem;
+}
+
+.explore:hover .exp-bg,
+.book:hover .book-bg
+{
+    filter: brightness(50%);
+}
+
+/* =============== EXP PAGE =================== */
+
+.exp-page
+{
+    position: relative;
+}
+
+
+.exp-page-nav
+{
+    position: absolute;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.exp-page-list
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--base-color);
+    margin: 0px 20px;
+}
+
+.exp-page-list li
+{
+    width: 100%;
+    text-align: center;
+    display: flex;
+}
+
+li a
+{
+    height: 4rem;
+    text-align: center;
+    transition: .5s;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exp-page-list li a:hover
+{
+    background-color: var(--bright-color);
+    color: var(--base-color);
+}
+
+.exp-page .exp__content-container
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-x: hidden;
+    transition: .4s;
+}
+
+
+.exp-page .exp__content-container .exp-content
+{
+    min-width: 100%;
+    height: 100%;
+}
+
+/* ================ BEACH SECTION ===================== */
+
+.beach-sec, .mount-sec, .cult-sec
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.beach-sec .beach-bg
+{
+    background: url("./assets/beach/gili\ trawangan\ 2.jpg");
+    background-size: cover;
+}
+
+.cult-sec .cult-bg
+{
+    background: url("./assets/culture/desa\ sade\ 1.jpg");
+    background-size: cover;
+}
+
+.mount-sec .mount-bg
+{
+    background: url("./assets/mount/rinjani\ 3.jpg");
+    background-size: cover;
+}
+
+/* ========== BOOK PAGE =============== */
+
+.book-page
+{
+    width: 100%;
+    position: relative;
+    overflow-y: hidden;
+    background-color: var(--base-color);
+}
+
+.book-page .book-page-container
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.book-page-container .book-title
+{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.book-page-container .book-card
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.book-page-container .book-card .card
+{
+    min-height: 180px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: 99;
+
+}
+
+.card .trip-content h3
+{
+    background-color: rgb(0, 0, 0);
+    height: 30%;
+    font-family: var(--title-fam);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .trip-content .detail
+{
+    opacity: .6;
+    padding: 10px 10px;
+}
+
+.card .trip-content .price
+{
+    font-weight: var(--semi-bold);
+    padding: 30px 10px 0 10px;
+    opacity: 1;
+    
+}
+
+.card .darken
+{
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    top: initial;
+}
+
+.card .trip-1-bg
+{
+    background: url("./assets/beach/pandanan\ beach\ 2.jpg");
+    background-size: cover;
+    filter: brightness(50%);
+}
+.card .trip-2-bg
+{
+    background: url("./assets/beach/gili\ trawangan\ 1.jpg");
+    background-size: cover;
+    filter: brightness(50%);
+}
+.card .trip-3-bg
+{
+    background: url("./assets/beach/senggigi\ beach\ 2.jpg");
+    background-size: cover;
+    filter: brightness(50%);
+}
+
+.card .trip-content
+{
+    background-color: rgba(0, 0, 0, 0.47);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transition: .4s;
+    font-size: var(--small-size);
+}
+
+.book-page-container .title-desc
+{
+    font-size: var(--small-size);
+    margin: 20px 0;
+    text-align: center;
+    width: 80%;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .book-card
+    {
+        display: flex;
+        justify-content: space-around;
+        row-gap: 5px;
+    }
+}
+
+@media screen and (min-width:  992px) {
+
+    .logo
+    {
+        font-size: var(--subtitle-size);
+    }
+
+    .logo .login
+    {
+        font-size: var(--header-size);
+    }
+
+    .card .trip-content
+    {
+        top: 70%;
+        font-size: var(--regular-size);
+    }
+
+    .card:hover .trip-content
+    {
+        top: 0;
+    }
+    .book-page-container .book-card .card
+    {
+        min-height: 400px;
+    }
+    .book-page-container .title-desc
+    {
+        font-size: var(--subtitle-size);
+        margin-top: 100px;
+    }
+}
