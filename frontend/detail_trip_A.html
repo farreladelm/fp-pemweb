@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./detail_trip_A.css">
+    <title>Detail Trip</title>
+</head>
+<body>
+      <div class="wrapper">
+    <span class="minus">-</span>
+    <span class="num">1</span>
+    <span class="plus">+</span>
+    <form action="">
+        <input type="hidden" name="pax" id="pax" value="">
+    </form>
+  </div>
+  <script>
+   const plus = document.querySelector(".plus"),
+    minus = document.querySelector(".minus"),
+    num = document.querySelector(".num");
+    input = document.getElementById("pax");
+    let a = 1;
+    pax.value = a;
+    plus.addEventListener("click", ()=>{
+      a++;
+      num.innerText = a;
+      pax.value = a;
+      console.log(pax.value);
+    });
+
+    minus.addEventListener("click", ()=>{
+      if(a > 1){
+        a--;
+        num.innerText = a;
+        pax.value = a;
+        console.log(pax.value);
+      }
+    });
+
+  </script>
+</body>
+</html>
