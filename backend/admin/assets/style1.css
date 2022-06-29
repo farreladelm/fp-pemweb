@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+:root {
+  --main-color: #027581;
+  --color-dark: #1d2231;
+  --text-grey: #8390a2;
+}
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  height: 100%;
+  width: 240px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  color: rgb(0, 0, 0);
+}
+
+.sidebar-header h3 {
+  margin-left: 2rem;
+}
+
+.sidebar-menu {
+  padding: 1rem;
+}
+
+.sidebar li {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 2rem;
+}
+
+.sidebar li:hover {
+  background: var(--main-color);
+  border-radius: 7px;
+}
+
+.sidebar a {
+  color: #fff;
+}
+
+.sidebar a span:last-child {
+  padding-left: 1rem;
+}
+
+.main-content main {
+  position: relative;
+  margin-left: 240px;
+  background: rgb(240, 240, 240);
+}
+
+header {
+  position: fixed;
+  left: 240px;
+  top: 0;
+  z-index: 100;
+  background: rgb(240, 240, 240);
+  height: 60px;
+  width: calc(100% - 240px);
+  padding: 0rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+
+main {
+  margin-top: 60px;
+  background: #f1f5f9;
+  min-height: 90vh;
+  padding: 1rem;
+}
+.dash-title {
+  margin-bottom: 1rem;
+  color: var(--color-dark);
+}
+.dash-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 17rem);
+  grid-column-gap: 2rem;
+  gap: 1.6rem;
+}
+
+.dash-cards > div span {
+  background: #027581;
+  padding: 0.7rem;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.card-single {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.card-body span {
+  font-size: 1.5rem;
+  color: #777;
+  padding-right: 1rem;
+}
+
+.card-body h5 {
+  color: var(--text-grey);
+  font-size: 1rem;
+}
+
+.card-body h4 {
+  color: var(--color-dark);
+  font-size: 1.1rem;
+  margin-top: 0.2rem;
+}
+
+.card-footer {
+  padding: 0.2rem 1rem;
+  background: #f9fafc;
+}
+
+.card-footer a {
+  color: var(--main-color);
+}
+
+.date {
+  display: inline-block;
+  background: rgba(132, 139, 200, 0.18);
+  border-radius: 0.4rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.6rem;
+}
+
+.date input[type="date"] {
+  border: none;
+  background: transparent;
+  color: rgb(24, 24, 24);
+}
+
+main .recent-orders {
+  margin-top: 2rem;
+}
+
+main .recent-orders h2 {
+  margin-bottom: 0.8rem;
+}
+
+main .recent-orders table {
+  background: #fff;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 1.8rem;
+  text-align: center;
+  box-shadow: 0 2rem 3rem #f1f5f9;
+  transition: all 303ms ease;
+}
+
+main .recent-orders table:hover {
+  box-shadow: none;
+}
+
+main table tbody td {
+  height: 2.8rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+thead th {
+  margin-bottom: 10rem;
+  color: rgb(7, 117, 60);
+}

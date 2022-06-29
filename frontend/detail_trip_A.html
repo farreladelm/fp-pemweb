@@ -1,44 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./detail_trip_A.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/1cf4c7dee0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./detail_trip_A.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Detail Trip</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="user-input" id="user-input">
+      <span class="exit" id="exit"><i class="fa-solid fa-xmark"></i></span>
+      <h2>Order Now</h2>
       <div class="wrapper">
-    <span class="minus">-</span>
-    <span class="num">1</span>
-    <span class="plus">+</span>
-    <form action="">
-        <input type="hidden" name="pax" id="pax" value="">
-    </form>
-  </div>
-  <script>
-   const plus = document.querySelector(".plus"),
-    minus = document.querySelector(".minus"),
-    num = document.querySelector(".num");
-    input = document.getElementById("pax");
-    let a = 1;
-    pax.value = a;
-    plus.addEventListener("click", ()=>{
-      a++;
-      num.innerText = a;
-      pax.value = a;
-      console.log(pax.value);
-    });
+        <span class="minus">-</span>
+        <span class="num">1</span>
+        <span class="plus">+</span>
+      </div>
+      <form action="">
+        <input type="hidden" name="pax" id="pax" value="" />
+        <input type="date" name="date" id="date" />
+        <input type="submit" value="submit" class="submit-btn" />
+      </form>
+    </div>
 
-    minus.addEventListener("click", ()=>{
-      if(a > 1){
-        a--;
+    <div class="container">
+      <div class="trip-title">
+        <h1>Trip A</h1>
+      </div>
+      <div class="img-trip"></div>
+      <div class="detail-trip">
+        <p class="destination">
+          Pantai Pandanan, Bukit Pergasingan, and Desa Banyumulek
+        </p>
+        <p class="price">65 USD/Pax</p>
+        <h3 class="title">Price Inclusive:</h3>
+        <ol>
+          <li>Good Car with Air condition</li>
+          <li>Good English or German-speaking guide</li>
+          <li>Lunch on the tour</li>
+          <li>Entrance Fee</li>
+          <li>Soft Drink</li>
+          <li>Tax & service</li>
+        </ol>
+        <h3 class="title">Price Exclusive:</h3>
+        <ol>
+          <li>Personal expenses</li>
+          <li>Hotel</li>
+          <li>Flight Ticket or boat ticket</li>
+          <li>Alcohol & Laundry</li>
+          <li>Dinner</li>
+        </ol>
+        <h3 class="title">Important Note:</h3>
+        <ol>
+          <li>Participant Min 2 Person.</li>
+          <li>All Program is based on private service</li>
+          <li>
+            The itinerary is subject to change without prior notice depending on
+            weather condition
+          </li>
+          <li>
+            If participant more than 10 people up we will Re quote again with a
+            special rate
+          </li>
+        </ol>
+        <h3 class="title">The thing to bring on Tour:</h3>
+        <p>
+          Towel, sunglass, sun cream, swimsuit, hat, slipper, changing t-shirt,
+          some cash for personal needs & tips
+        </p>
+      </div>
+    </div>
+    <script>
+      const plus = document.querySelector(".plus"),
+        minus = document.querySelector(".minus"),
+        num = document.querySelector(".num");
+      input = document.getElementById("pax");
+      user_input = document.getElementById("user-input");
+      exit = document.getElementById("exit");
+      let a = 1;
+      pax.value = a;
+      plus.addEventListener("click", () => {
+        a++;
         num.innerText = a;
         pax.value = a;
         console.log(pax.value);
-      }
-    });
+      });
 
-  </script>
-</body>
+      minus.addEventListener("click", () => {
+        if (a > 1) {
+          a--;
+          num.innerText = a;
+          pax.value = a;
+          console.log(pax.value);
+        }
+      });
+
+      user_input.addEventListener("click", () => {
+        user_input.classList.add("order");
+      });
+
+      exit.addEventListener("click", (e) => {
+        e.stopPropagation();
+        user_input.classList.remove("order");
+      });
+    </script>
+  </body>
 </html>

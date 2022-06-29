@@ -1,0 +1,180 @@
+/* Google fonts import link */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;1,400;1,500;1,600;1,700&family=Poppins:wght@300;400;500;600;700&display=swap");
+:root {
+  /* COLOR */
+  --primary-color: hsl(229, 92%, 20%);
+  --accent-color: hsl(0, 85%, 46%);
+  --accent-bright-color: hsl(0, 100%, 68%);
+  --base-color: hsl(0, 0%, 0%);
+  --bright-color: hsl(0, 0%, 93%);
+
+  /* FONT SIZE */
+  --regular-size: 1rem;
+  --subtitle-size: 1.3rem;
+  --small-size: 0.8rem;
+  --header-size: 2rem;
+
+  /* SCREEN BIGGER */
+  --header-tb: 4rem;
+
+  /* FONT FAM */
+  --title-fam: "Playfair Display", serif;
+  --regular-fam: "Poppins", sans-serif;
+
+  /* FONT WEIGHT */
+  --regular: 500;
+  --semi-bold: 600;
+  --bold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: var(--base-color);
+}
+body {
+  position: relative;
+}
+
+.container {
+  height: auto;
+
+  width: 100%;
+  background: #ffffff;
+  padding: 40px;
+  padding-bottom: 100px;
+}
+
+form {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form #date {
+  width: 190px;
+  border: none;
+  height: 60px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 0 5px;
+}
+
+.exit {
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  transition: 0.5s;
+  transform: scale(0);
+  display: none;
+}
+
+.user-input {
+  position: fixed;
+  bottom: -270px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 400px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--bright-color);
+  border-radius: 50px 50px 0 0;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.user-input.order {
+  bottom: 0;
+}
+
+.user-input.order .exit {
+  transform: scale(1);
+  display: inline-block;
+}
+
+.user-input form .submit-btn {
+  width: 190px;
+  margin-bottom: 40px;
+}
+
+.wrapper {
+  height: 60px;
+  min-width: 190px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: black;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.wrapper span {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+.wrapper span.num {
+  font-size: 20px;
+  border-right: 2px solid rgba(0, 0, 0, 0.2);
+  border-left: 2px solid rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.user-input h2 {
+  margin: 20px 0 40px 0;
+}
+
+/* ===== IMG TRIP ========= */
+
+.img-trip {
+  width: 100%;
+  max-width: 500px;
+  min-height: 300px;
+  background-size: cover;
+  margin: 10px auto;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  transition: 0.5s;
+}
+
+.img-trip:hover {
+  transform: scale(1.1);
+}
+/* ====== TRIP DETAIL ======= */
+.trip-title h1 {
+  text-align: center;
+  font-family: var(--title-fam);
+  margin-bottom: 20px;
+}
+.detail-trip .title {
+  margin: 10px 0;
+}
+
+.detail-trip ul,
+.detail-trip ol {
+  margin-left: 20px;
+}
+
+.destination {
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}

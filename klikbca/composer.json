@@ -1,0 +1,21 @@
+{
+    "name": "ammarfaizi2/klikbca",
+    "description": "KlikBCA",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ammar Faizi",
+            "email": "ammarfaizi2@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "KlikBCA\\": "src/KlikBCA/"
+        }
+    }
+}
