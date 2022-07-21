@@ -45,7 +45,7 @@ function show_balance($username, $password)
   err:
   printf("Error: %s\n", $bca->getErr());
 }
-// show_balance($username, $password);
+show_balance($username, $password);
 
 /**
  * Show account statements given the date range.
@@ -83,7 +83,7 @@ function show_account_statements($username, $password, $startDate, $endDate)
   err:
   printf("Error: %s\n", $bca->getErr());
 }
-// $startDate = date("Y-m-d", strtotime("-1 week"));
-$startDate = date("Y-m-d");
+$startDate = date("Y-m-d", strtotime("-1 week"));
+//$startDate = date("Y-m-d");
 $endDate = date("Y-m-d");
 show_account_statements($username, $password, $startDate, $endDate);

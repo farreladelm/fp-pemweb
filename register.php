@@ -16,8 +16,8 @@ $mail->SMTPAuth = true;
 $mail->SMTPSecure = "tls";
 $mail->Port = 465;
 $mail->Host = "ssl://smtp.gmail.com";
-$mail->Username = "20081010064@student.upnjatim.ac.id";
-$mail->Password = "sauthil0708";
+$mail->Username = "";
+$mail->Password = "";
 
 session_start();
 session_destroy();
